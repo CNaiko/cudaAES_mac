@@ -321,7 +321,7 @@ static void test_latency_stream_aes_cbc_encrypt(unsigned key_bits,
 					    param[stream].tot_out_len,
 					    stream);
 		} else {
-			usleep(0);
+			sleep(0);
 		}
 
 	} while (count < rounds);
@@ -404,7 +404,7 @@ static void test_latency_stream_aes_cbc_decrypt(unsigned key_bits,
 			printf("%d", active_stream);
 #endif
 		} else {
-			usleep(0);
+			sleep(0);
 		}
 
 	} while (count < rounds);
