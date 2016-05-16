@@ -1,13 +1,161 @@
-objs/rsa_context.o: rsa_context.cc rsa_context.hh
+objs/aes_kernel.o: aes_kernel.cu aes_core.h aes_kernel.h
 
-rsa_context.hh:
-objs/rsa_context_rns.o: rsa_context_rns.cc rsa_context_rns.hh rsa_context.hh \
-  rsa_cuda.h bn_kn.h
+aes_core.h:
 
-rsa_context_rns.hh:
+aes_kernel.h:
+objs/sha1.o: sha1.cu sha1.hh
 
-rsa_context.hh:
+sha1.hh:
+objs/aes_context.o: aes_context.cc aes_context.hh cuda_mem_pool.hh \
+  memory_pool.hh device_context.hh pinned_mem_pool.hh aes_kernel.h \
+  /usr/local/cuda/samples/common/inc/helper_cuda.h \
+  /usr/local/cuda/samples/common/inc/helper_string.h \
+  /usr/local/cuda/samples/common/inc/helper_cuda_gl.h \
+  /usr/local/cuda/samples/common/inc/helper_functions.h \
+  /usr/local/cuda/samples/common/inc/exception.h \
+  /usr/local/cuda/samples/common/inc/helper_timer.h \
+  /usr/local/cuda/samples/common/inc/helper_image.h
 
-rsa_cuda.h:
+aes_context.hh:
 
-bn_kn.h:
+cuda_mem_pool.hh:
+
+memory_pool.hh:
+
+device_context.hh:
+
+pinned_mem_pool.hh:
+
+aes_kernel.h:
+
+/usr/local/cuda/samples/common/inc/helper_cuda.h:
+
+/usr/local/cuda/samples/common/inc/helper_string.h:
+
+/usr/local/cuda/samples/common/inc/helper_cuda_gl.h:
+
+/usr/local/cuda/samples/common/inc/helper_functions.h:
+
+/usr/local/cuda/samples/common/inc/exception.h:
+
+/usr/local/cuda/samples/common/inc/helper_timer.h:
+
+/usr/local/cuda/samples/common/inc/helper_image.h:
+objs/cuda_mem_pool.o: cuda_mem_pool.cc cuda_mem_pool.hh memory_pool.hh \
+  /usr/local/cuda/samples/common/inc/helper_cuda.h \
+  /usr/local/cuda/samples/common/inc/helper_string.h \
+  /usr/local/cuda/samples/common/inc/helper_cuda_gl.h \
+  /usr/local/cuda/samples/common/inc/helper_functions.h \
+  /usr/local/cuda/samples/common/inc/exception.h \
+  /usr/local/cuda/samples/common/inc/helper_timer.h \
+  /usr/local/cuda/samples/common/inc/helper_image.h
+
+cuda_mem_pool.hh:
+
+memory_pool.hh:
+
+/usr/local/cuda/samples/common/inc/helper_cuda.h:
+
+/usr/local/cuda/samples/common/inc/helper_string.h:
+
+/usr/local/cuda/samples/common/inc/helper_cuda_gl.h:
+
+/usr/local/cuda/samples/common/inc/helper_functions.h:
+
+/usr/local/cuda/samples/common/inc/exception.h:
+
+/usr/local/cuda/samples/common/inc/helper_timer.h:
+
+/usr/local/cuda/samples/common/inc/helper_image.h:
+objs/device_context.o: device_context.cc device_context.hh pinned_mem_pool.hh \
+  memory_pool.hh cuda_mem_pool.hh \
+  /usr/local/cuda/samples/common/inc/helper_cuda.h \
+  /usr/local/cuda/samples/common/inc/helper_string.h \
+  /usr/local/cuda/samples/common/inc/helper_cuda_gl.h \
+  /usr/local/cuda/samples/common/inc/helper_functions.h \
+  /usr/local/cuda/samples/common/inc/exception.h \
+  /usr/local/cuda/samples/common/inc/helper_timer.h \
+  /usr/local/cuda/samples/common/inc/helper_image.h
+
+device_context.hh:
+
+pinned_mem_pool.hh:
+
+memory_pool.hh:
+
+cuda_mem_pool.hh:
+
+/usr/local/cuda/samples/common/inc/helper_cuda.h:
+
+/usr/local/cuda/samples/common/inc/helper_string.h:
+
+/usr/local/cuda/samples/common/inc/helper_cuda_gl.h:
+
+/usr/local/cuda/samples/common/inc/helper_functions.h:
+
+/usr/local/cuda/samples/common/inc/exception.h:
+
+/usr/local/cuda/samples/common/inc/helper_timer.h:
+
+/usr/local/cuda/samples/common/inc/helper_image.h:
+objs/pinned_mem_pool.o: pinned_mem_pool.cc pinned_mem_pool.hh memory_pool.hh \
+  /usr/local/cuda/samples/common/inc/helper_cuda.h \
+  /usr/local/cuda/samples/common/inc/helper_string.h \
+  /usr/local/cuda/samples/common/inc/helper_cuda_gl.h \
+  /usr/local/cuda/samples/common/inc/helper_functions.h \
+  /usr/local/cuda/samples/common/inc/exception.h \
+  /usr/local/cuda/samples/common/inc/helper_timer.h \
+  /usr/local/cuda/samples/common/inc/helper_image.h
+
+pinned_mem_pool.hh:
+
+memory_pool.hh:
+
+/usr/local/cuda/samples/common/inc/helper_cuda.h:
+
+/usr/local/cuda/samples/common/inc/helper_string.h:
+
+/usr/local/cuda/samples/common/inc/helper_cuda_gl.h:
+
+/usr/local/cuda/samples/common/inc/helper_functions.h:
+
+/usr/local/cuda/samples/common/inc/exception.h:
+
+/usr/local/cuda/samples/common/inc/helper_timer.h:
+
+/usr/local/cuda/samples/common/inc/helper_image.h:
+objs/sha_context.o: sha_context.cc sha_context.hh cuda_mem_pool.hh \
+  memory_pool.hh device_context.hh pinned_mem_pool.hh sha1.hh \
+  /usr/local/cuda/samples/common/inc/helper_cuda.h \
+  /usr/local/cuda/samples/common/inc/helper_string.h \
+  /usr/local/cuda/samples/common/inc/helper_cuda_gl.h \
+  /usr/local/cuda/samples/common/inc/helper_functions.h \
+  /usr/local/cuda/samples/common/inc/exception.h \
+  /usr/local/cuda/samples/common/inc/helper_timer.h \
+  /usr/local/cuda/samples/common/inc/helper_image.h
+
+sha_context.hh:
+
+cuda_mem_pool.hh:
+
+memory_pool.hh:
+
+device_context.hh:
+
+pinned_mem_pool.hh:
+
+sha1.hh:
+
+/usr/local/cuda/samples/common/inc/helper_cuda.h:
+
+/usr/local/cuda/samples/common/inc/helper_string.h:
+
+/usr/local/cuda/samples/common/inc/helper_cuda_gl.h:
+
+/usr/local/cuda/samples/common/inc/helper_functions.h:
+
+/usr/local/cuda/samples/common/inc/exception.h:
+
+/usr/local/cuda/samples/common/inc/helper_timer.h:
+
+/usr/local/cuda/samples/common/inc/helper_image.h:

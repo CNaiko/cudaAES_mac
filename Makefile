@@ -31,7 +31,7 @@ $(OBJS_DIR):
 	mkdir $(OBJS_DIR)
 
 $(DEPS): $(SRC_FILES) $(HEADER_FILES)
-	$(CC) -MM -MP -x c++ $(CU_SRC_FILES) $(CC_SRC_FILES) | sed 's![^:]*.o:!objs/&!g' > Makefile.dep
+	$(CC) -MM -MP -x c++ $(CFLAGS) $(INC)  $(CU_SRC_FILES) $(CC_SRC_FILES) | sed 's![^:]*.o:!objs/&!g' > Makefile.dep
 
 $(OBJS_DIR)/%.o : %.cc
 	$(CC) $(CFLAGS) $(INC) $(NVINC) -c $< -o $@
