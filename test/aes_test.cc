@@ -8,6 +8,7 @@
 #include <time.h>
 #include <unistd.h>
 #include <stdio.h>
+#include <sched.h>
 
 #include "aes_kernel.h"
 #include "aes_context.hh"
@@ -321,7 +322,7 @@ static void test_latency_stream_aes_cbc_encrypt(unsigned key_bits,
 					    param[stream].tot_out_len,
 					    stream);
 		} else {
-			sleep(0);
+			//sleep(0);
 		}
 
 	} while (count < rounds);
@@ -404,7 +405,7 @@ static void test_latency_stream_aes_cbc_decrypt(unsigned key_bits,
 			printf("%d", active_stream);
 #endif
 		} else {
-			sleep(0);
+			//sleep(0);
 		}
 
 	} while (count < rounds);

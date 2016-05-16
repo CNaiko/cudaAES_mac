@@ -241,7 +241,7 @@ static void test_latency_stream(rsa_context_mp *rsa, device_context *dev_ctx, in
 							 (const unsigned char **)ctext_arr_str[stream],
 							 ctext_len_str[stream], k, stream);
 			} else {
-				usleep(0);
+				//sleep(0);
 			}
 		} while (count < rounds + concurrency);
 		end = get_usec();
