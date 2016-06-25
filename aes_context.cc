@@ -86,7 +86,7 @@ void aes_context::cbc_encrypt(const void           *memory_start,
 
 	}
 
-	assert(cudaGetLastError() == cudaSuccess);
+//	assert(cudaGetLastError() == cudaSuccess);
 
 	streams[stream_id].out     = out;
 	streams[stream_id].out_len = tot_out_len;

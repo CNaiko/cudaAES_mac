@@ -3,9 +3,158 @@ objs/aes_kernel.o: aes_kernel.cu aes_core.h aes_kernel.h
 aes_core.h:
 
 aes_kernel.h:
-objs/sha1.o: sha1.cu sha1.hh
+objs/bn_kn.o: bn_kn.cu /usr/local/cuda/samples/common/inc/helper_cuda.h \
+  /usr/local/cuda/samples/common/inc/helper_string.h \
+  /usr/local/cuda/samples/common/inc/helper_cuda_gl.h \
+  /usr/local/cuda/samples/common/inc/helper_functions.h \
+  /usr/local/cuda/samples/common/inc/exception.h \
+  /usr/local/cuda/samples/common/inc/helper_timer.h \
+  /usr/local/cuda/samples/common/inc/helper_image.h bn_kn.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/bn.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/e_os2.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/opensslconf.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/ossl_typ.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/crypto.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/stack.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/safestack.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/opensslv.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/symhacks.h
 
-sha1.hh:
+/usr/local/cuda/samples/common/inc/helper_cuda.h:
+
+/usr/local/cuda/samples/common/inc/helper_string.h:
+
+/usr/local/cuda/samples/common/inc/helper_cuda_gl.h:
+
+/usr/local/cuda/samples/common/inc/helper_functions.h:
+
+/usr/local/cuda/samples/common/inc/exception.h:
+
+/usr/local/cuda/samples/common/inc/helper_timer.h:
+
+/usr/local/cuda/samples/common/inc/helper_image.h:
+
+bn_kn.h:
+
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/bn.h:
+
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/e_os2.h:
+
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/opensslconf.h:
+
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/ossl_typ.h:
+
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/crypto.h:
+
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/stack.h:
+
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/safestack.h:
+
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/opensslv.h:
+
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/symhacks.h:
+objs/mp_modexp_gpu.o: mp_modexp_gpu.cu mp_modexp.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/bn.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/e_os2.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/opensslconf.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/ossl_typ.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/crypto.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/stack.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/safestack.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/opensslv.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/symhacks.h \
+  /usr/local/cuda/samples/common/inc/helper_cuda.h \
+  /usr/local/cuda/samples/common/inc/helper_string.h \
+  /usr/local/cuda/samples/common/inc/helper_cuda_gl.h \
+  /usr/local/cuda/samples/common/inc/helper_functions.h \
+  /usr/local/cuda/samples/common/inc/exception.h \
+  /usr/local/cuda/samples/common/inc/helper_timer.h \
+  /usr/local/cuda/samples/common/inc/helper_image.h
+
+mp_modexp.h:
+
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/bn.h:
+
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/e_os2.h:
+
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/opensslconf.h:
+
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/ossl_typ.h:
+
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/crypto.h:
+
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/stack.h:
+
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/safestack.h:
+
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/opensslv.h:
+
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/symhacks.h:
+
+/usr/local/cuda/samples/common/inc/helper_cuda.h:
+
+/usr/local/cuda/samples/common/inc/helper_string.h:
+
+/usr/local/cuda/samples/common/inc/helper_cuda_gl.h:
+
+/usr/local/cuda/samples/common/inc/helper_functions.h:
+
+/usr/local/cuda/samples/common/inc/exception.h:
+
+/usr/local/cuda/samples/common/inc/helper_timer.h:
+
+/usr/local/cuda/samples/common/inc/helper_image.h:
+objs/mp_modexp_gputest.o: mp_modexp_gputest.cu \
+  /usr/local/cuda/samples/common/inc/helper_cuda.h \
+  /usr/local/cuda/samples/common/inc/helper_string.h \
+  /usr/local/cuda/samples/common/inc/helper_cuda_gl.h \
+  /usr/local/cuda/samples/common/inc/helper_functions.h \
+  /usr/local/cuda/samples/common/inc/exception.h \
+  /usr/local/cuda/samples/common/inc/helper_timer.h \
+  /usr/local/cuda/samples/common/inc/helper_image.h mp_modexp.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/bn.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/e_os2.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/opensslconf.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/ossl_typ.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/crypto.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/stack.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/safestack.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/opensslv.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/symhacks.h
+
+/usr/local/cuda/samples/common/inc/helper_cuda.h:
+
+/usr/local/cuda/samples/common/inc/helper_string.h:
+
+/usr/local/cuda/samples/common/inc/helper_cuda_gl.h:
+
+/usr/local/cuda/samples/common/inc/helper_functions.h:
+
+/usr/local/cuda/samples/common/inc/exception.h:
+
+/usr/local/cuda/samples/common/inc/helper_timer.h:
+
+/usr/local/cuda/samples/common/inc/helper_image.h:
+
+mp_modexp.h:
+
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/bn.h:
+
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/e_os2.h:
+
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/opensslconf.h:
+
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/ossl_typ.h:
+
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/crypto.h:
+
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/stack.h:
+
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/safestack.h:
+
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/opensslv.h:
+
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/symhacks.h:
 objs/aes_context.o: aes_context.cc aes_context.hh cuda_mem_pool.hh \
   memory_pool.hh device_context.hh pinned_mem_pool.hh aes_kernel.h \
   /usr/local/cuda/samples/common/inc/helper_cuda.h \
@@ -98,7 +247,16 @@ cuda_mem_pool.hh:
 /usr/local/cuda/samples/common/inc/helper_timer.h:
 
 /usr/local/cuda/samples/common/inc/helper_image.h:
-objs/pinned_mem_pool.o: pinned_mem_pool.cc pinned_mem_pool.hh memory_pool.hh \
+objs/mp_modexp.o: mp_modexp.cc mp_modexp.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/bn.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/e_os2.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/opensslconf.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/ossl_typ.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/crypto.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/stack.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/safestack.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/opensslv.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/symhacks.h \
   /usr/local/cuda/samples/common/inc/helper_cuda.h \
   /usr/local/cuda/samples/common/inc/helper_string.h \
   /usr/local/cuda/samples/common/inc/helper_cuda_gl.h \
@@ -107,9 +265,25 @@ objs/pinned_mem_pool.o: pinned_mem_pool.cc pinned_mem_pool.hh memory_pool.hh \
   /usr/local/cuda/samples/common/inc/helper_timer.h \
   /usr/local/cuda/samples/common/inc/helper_image.h
 
-pinned_mem_pool.hh:
+mp_modexp.h:
 
-memory_pool.hh:
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/bn.h:
+
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/e_os2.h:
+
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/opensslconf.h:
+
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/ossl_typ.h:
+
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/crypto.h:
+
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/stack.h:
+
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/safestack.h:
+
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/opensslv.h:
+
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/symhacks.h:
 
 /usr/local/cuda/samples/common/inc/helper_cuda.h:
 
@@ -124,8 +298,16 @@ memory_pool.hh:
 /usr/local/cuda/samples/common/inc/helper_timer.h:
 
 /usr/local/cuda/samples/common/inc/helper_image.h:
-objs/sha_context.o: sha_context.cc sha_context.hh cuda_mem_pool.hh \
-  memory_pool.hh device_context.hh pinned_mem_pool.hh sha1.hh \
+objs/mp_modexp_cpu.o: mp_modexp_cpu.cc mp_modexp.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/bn.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/e_os2.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/opensslconf.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/ossl_typ.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/crypto.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/stack.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/safestack.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/opensslv.h \
+  /usr/local/Cellar/openssl/1.0.2d_1/include/openssl/symhacks.h \
   /usr/local/cuda/samples/common/inc/helper_cuda.h \
   /usr/local/cuda/samples/common/inc/helper_string.h \
   /usr/local/cuda/samples/common/inc/helper_cuda_gl.h \
@@ -134,17 +316,51 @@ objs/sha_context.o: sha_context.cc sha_context.hh cuda_mem_pool.hh \
   /usr/local/cuda/samples/common/inc/helper_timer.h \
   /usr/local/cuda/samples/common/inc/helper_image.h
 
-sha_context.hh:
+mp_modexp.h:
 
-cuda_mem_pool.hh:
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/bn.h:
 
-memory_pool.hh:
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/e_os2.h:
 
-device_context.hh:
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/opensslconf.h:
+
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/ossl_typ.h:
+
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/crypto.h:
+
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/stack.h:
+
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/safestack.h:
+
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/opensslv.h:
+
+/usr/local/Cellar/openssl/1.0.2d_1/include/openssl/symhacks.h:
+
+/usr/local/cuda/samples/common/inc/helper_cuda.h:
+
+/usr/local/cuda/samples/common/inc/helper_string.h:
+
+/usr/local/cuda/samples/common/inc/helper_cuda_gl.h:
+
+/usr/local/cuda/samples/common/inc/helper_functions.h:
+
+/usr/local/cuda/samples/common/inc/exception.h:
+
+/usr/local/cuda/samples/common/inc/helper_timer.h:
+
+/usr/local/cuda/samples/common/inc/helper_image.h:
+objs/pinned_mem_pool.o: pinned_mem_pool.cc pinned_mem_pool.hh memory_pool.hh \
+  /usr/local/cuda/samples/common/inc/helper_cuda.h \
+  /usr/local/cuda/samples/common/inc/helper_string.h \
+  /usr/local/cuda/samples/common/inc/helper_cuda_gl.h \
+  /usr/local/cuda/samples/common/inc/helper_functions.h \
+  /usr/local/cuda/samples/common/inc/exception.h \
+  /usr/local/cuda/samples/common/inc/helper_timer.h \
+  /usr/local/cuda/samples/common/inc/helper_image.h
 
 pinned_mem_pool.hh:
 
-sha1.hh:
+memory_pool.hh:
 
 /usr/local/cuda/samples/common/inc/helper_cuda.h:
 

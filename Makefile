@@ -37,7 +37,7 @@ $(OBJS_DIR)/%.o : %.cc
 	$(CC) $(CFLAGS) $(INC) $(NVINC) -c $< -o $@
 
 $(OBJS_DIR)/%.o : %.cu
-	$(NVCC) $(NVCFLAGS) $(NVINC) -c $< -o $@
+	$(NVCC) $(INC) $(NVCFLAGS) $(NVINC) -c $< -o $@
 
 .PHONY : test clean doc
 
